@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brandon Bang">
+    <meta name="description" content="A friendly Web Developer based in Southwest Florida offering quality custom mobile-first websites to suit your needs. Contact me today to find out how I can improve your online presence.">
+    <title>Brandon Bang - Web Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lobster&family=Permanent+Marker&family=Staatliches&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header class="header-top">
+        <div class="header-wrapper">
+            <div class="brand">
+                <a href="/" title="Home">
+                    <h1>Brandon Bang!</h1>
+                </a>
+            </div>
+            <nav id="main-nav" class="main-nav">
+                <a class="menu-icon" href="#" aria-label="Toggle Navigation"></a>
+
+                <ul>
+                    <li>
+                        <a href="#hero" title="About Me">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact" title="Contact Me">Contact Me</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="hero" class="hero">
+            <img src="/images/icons/braces-line.svg" alt="" class="hero-icon">
+
+            <h2>Hi, I'm Brandon Bang, and I'm a Web Developer.</h2>
+            <p>If you need somone with a passion for all things coding and who would love to come up with your next website solution, I'm your guy. <a href="#contact">Feel free to contact me if you have any questions!</a></p>
+
+            <a class="button" href="#skills" >See what I can do</a>
+        </section>
+        <section id="about">
+            <h2>A Little About Me</h2>
+            
+            <div class="icon-bio">
+                <!--<img src="https://via.placeholder.com/150" alt="An image of me." width="150", height="150">-->
+                
+                <div class="info">
+                    <p>
+                        I love problem solving, and programming gives me endless challenges to overcome.
+                        <br><br>
+                        Most of my skills are focused in the front end of web development at the moment, but I am currently learning about back end development as well. I'm fascinated with many aspects of technology, and I'm constantly learning new things on my own. One of my most important strengths is being able to overcome unknown territory through my research skills, and quickly absorbing and making sense of what I need to know. This really helps when I'm facing a daunting problem.
+                        <br><br>
+                        Aside from coding, I also enjoy cooking, drawing, and going for really long walks.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <!--TODO: Something like this:
+
+                Mobile First
+                ------------
+                About 50% of internet traffic today is
+                from mobile devices. I will make your
+                site speedy and responsive so anyone
+                can use and enjoy your content.
+
+                Best Practices
+                --------------
+                I take pride in my work, and I'll do
+                my best at making sure your site runs
+                exceptionally well and meets standards,
+                making SEO and accessibility much easier.
+
+                Unique Solutions
+                ----------------
+                One size doesn't fit all. Everyone has
+                different needs, and I will be dedicated to
+                understanding yours so I can tailor a solution
+                that works for you.
+
+            -->
+
+            <h2>My Skills</h2>
+
+            <div class="row">
+                <div class="skills-card">
+                    <h3>Front End Web Development</h3>
+    
+                    <ul>
+                        <li>
+                            Modern HTML, CSS, and JavaScript
+                        </li>
+                        <li>
+                            Industry Standard Workflow: Git, NPM, Sass, Grunt, and WebPack
+                        </li>
+                        <li>
+                            Responsive design: I make sites look good at any screen size
+                        </li>
+                        <li>
+                            Accessibility and SEO best practices
+                        </li>
+                    </ul>
+                </div>
+                <div class="skills-card">
+                    <h3>Software</h3>
+    
+                    <ul>
+                        <li>
+                            The Adobe Suite: Photoshop, Illustrator, XD, and Premiere
+                        </li>
+                        <li>
+                            CMS: WordPress
+                        </li>
+                        <li>
+                            ECommerce: WooCommerce, BigCommerce
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="experience">
+            <!-- TODO: Make awesome timeline -->
+            <h2>Projects and Experience</h2>
+
+            <p>I'm currently working as a Web Developer at <a href="https://www.suiteedge.com/">Suite Edge</a>. I create and use custom code to help my team provide great web solutions for our clients.</p>
+        </section>
+        <section id="contact">
+            <h2>Let's Get in Touch!</h2>
+
+            <form class="contact-form" name="contact" method="POST" action="/success" data-netlify="true">
+                <ul>
+                    <li>
+                        <label for="name">Name</label>
+                        <input type="text" name="contact_name" id="name" required>
+                    </li>
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="email" name="contact_email" id="email" required>
+                    </li>
+                    <li>
+                        <label for="message">Message</label>
+                        <textarea name="contact_msg" id="message" cols="30" rows="10" required></textarea>
+                    </li>
+                    <li>
+                        <button class="button" type="submit">Send message</button>
+                    </li>
+                </ul>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-wrapper">
+            <div class="page-info">
+                <p>
+                    Created from scratch with modern HTML and CSS by Brandon Bang.
+                </p>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/" title="Home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#hero" title="About Me">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact" title="Contact Me">Contact Me</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script src="/scripts/script.js" async></script>
+    <script src="/scripts/secret.js" async></script>
+</body>
+</html>
