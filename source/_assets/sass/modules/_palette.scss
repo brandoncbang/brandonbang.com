@@ -1,6 +1,6 @@
 @use 'sass:map';
 
-
+// Protip: Use HSL! It's more intuitive than HEX or RGB.
 $palette: (
     'red': (
         1: hsl(2, 63%, 9%),
