@@ -1,5 +1,13 @@
+html {
+    scroll-behavior: smooth;
+
+    @media (prefers-reduced-motion: reduce) {
+        scroll-behavior: auto;
+    }
+}
+
 body {
-    font-size: 17px;
+    font-size: 18px;
 }
 
 a {

@@ -28,19 +28,22 @@
 </head>
 
 <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
-    <header class="flex justify-between items-center px-5 py-3">
-        <a href="/" class="block">
-            <h1 class="m-0 text-3xl">{{$page->siteName}}</h1>
-        </a>
-        @include('_nav.menu')
+    <header class="border-t-4 border-blue-500 px-5 py-3 z-30">
+        <div class="flex justify-between items-center max-w-screen-xl mx-auto">
+            <a href="/" class="block">
+                <h1 class="m-0 text-3xl">{{$page->siteName}}</h1>
+            </a>
+            @include('_nav.menu')
+        </div>
     </header>
 
-    <main class="flex-1 px-5">
+    <main class="flex-1">
         @yield('body')
     </main>
 
     <footer class="bg-white text-center text-sm py-4">
-        Bep
+        <a href="mailto:contact@brandonbang.com">contact@brandonbang.com</a>
+        <p>Copyright © {{ date('Y') }} Brandon Bang</p>
     </footer>
 
     <script src="{{ mix('js/main.js', 'assets/build') }}"></script>

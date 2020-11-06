@@ -40,6 +40,12 @@ module.exports = {
       },
       boxShadow: {
         'lg': '0 -1px 27px 0 rgba(0, 0, 0, 0.04), 0 4px 15px 0 rgba(0, 0, 0, 0.08)',
+      },
+      animation: {
+        
+      },
+      keyframes: {
+
       }
     },
     fontSize: {
@@ -52,13 +58,16 @@ module.exports = {
       '3xl': '1.75rem',
       '4xl': '2.125rem',
       '5xl': '2.625rem',
-      '6xl': '10rem',
+      '6xl': '3.5rem',
     },
   },
   variants: {
     borderRadius: ['responsive', 'focus'],
     borderWidth: ['responsive', 'active', 'focus'],
-    width: ['responsive', 'focus']
+    width: ['responsive', 'focus'],
+    translate: ['responsive', 'hover', 'focus', 'group-hover'],
+    padding: ['responsive', 'hover'],
+    textColor: ['hover', 'focus', 'group-hover']
   },
   plugins: [
     function({ addUtilities }) {
