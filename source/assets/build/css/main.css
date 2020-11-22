@@ -522,7 +522,7 @@ ul {
  */
 
 html {
-  font-family: Nunito Sans; /* 1 */
+  font-family: Open Sans, sans-serif; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -747,11 +747,11 @@ video {
 }
 
 .hamburger:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .hamburger.is-active:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .hamburger.is-active .hamburger-inner,
@@ -1766,14 +1766,14 @@ a {
   font-weight: 600;
   text-decoration: none;
   --text-opacity: 1;
-  color: #3182ce;
-  color: rgba(49, 130, 206, var(--text-opacity));
+  color: #63b3ed;
+  color: rgba(99, 179, 237, var(--text-opacity));
 }
 
 a:hover {
   --text-opacity: 1;
-  color: #2c5282;
-  color: rgba(44, 82, 130, var(--text-opacity));
+  color: #90cdf4;
+  color: rgba(144, 205, 244, var(--text-opacity));
 }
 
 blockquote {
@@ -1823,11 +1823,13 @@ h4,
 h5,
 h6 {
   line-height: 1.25;
+  letter-spacing: 0.025em;
   margin-bottom: 1rem;
   margin-top: 2rem;
   --text-opacity: 1;
   color: #1a202c;
   color: rgba(26, 32, 44, var(--text-opacity));
+  font-family: Poppins, sans-serif;
 }
 
 h1:first-child,
@@ -5033,6 +5035,10 @@ pre code {
 
 .bg-gradient-to-tl{
   background-image: linear-gradient(to top left, var(--gradient-color-stops));
+}
+
+.bg-hero-pattern{
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .from-transparent{
@@ -12366,7 +12372,7 @@ pre code {
 }
 
 .font-sans{
-  font-family: Nunito Sans;
+  font-family: Open Sans, sans-serif;
 }
 
 .font-serif{
@@ -12375,6 +12381,10 @@ pre code {
 
 .font-mono{
   font-family: monospace;
+}
+
+.font-heading{
+  font-family: Poppins, sans-serif;
 }
 
 .font-hairline{
@@ -28806,6 +28816,10 @@ pre code {
     background-image: linear-gradient(to top left, var(--gradient-color-stops));
   }
 
+  .sm\:bg-hero-pattern{
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
   .sm\:from-transparent{
     --gradient-from-color: transparent;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -36137,7 +36151,7 @@ pre code {
   }
 
   .sm\:font-sans{
-    font-family: Nunito Sans;
+    font-family: Open Sans, sans-serif;
   }
 
   .sm\:font-serif{
@@ -36146,6 +36160,10 @@ pre code {
 
   .sm\:font-mono{
     font-family: monospace;
+  }
+
+  .sm\:font-heading{
+    font-family: Poppins, sans-serif;
   }
 
   .sm\:font-hairline{
@@ -50264,6 +50282,10 @@ pre code {
     background-image: linear-gradient(to top left, var(--gradient-color-stops));
   }
 
+  .md\:bg-hero-pattern{
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
   .md\:from-transparent{
     --gradient-from-color: transparent;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -57595,7 +57617,7 @@ pre code {
   }
 
   .md\:font-sans{
-    font-family: Nunito Sans;
+    font-family: Open Sans, sans-serif;
   }
 
   .md\:font-serif{
@@ -57604,6 +57626,10 @@ pre code {
 
   .md\:font-mono{
     font-family: monospace;
+  }
+
+  .md\:font-heading{
+    font-family: Poppins, sans-serif;
   }
 
   .md\:font-hairline{
@@ -71722,6 +71748,10 @@ pre code {
     background-image: linear-gradient(to top left, var(--gradient-color-stops));
   }
 
+  .lg\:bg-hero-pattern{
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
   .lg\:from-transparent{
     --gradient-from-color: transparent;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -79053,7 +79083,7 @@ pre code {
   }
 
   .lg\:font-sans{
-    font-family: Nunito Sans;
+    font-family: Open Sans, sans-serif;
   }
 
   .lg\:font-serif{
@@ -79062,6 +79092,10 @@ pre code {
 
   .lg\:font-mono{
     font-family: monospace;
+  }
+
+  .lg\:font-heading{
+    font-family: Poppins, sans-serif;
   }
 
   .lg\:font-hairline{
@@ -93180,6 +93214,10 @@ pre code {
     background-image: linear-gradient(to top left, var(--gradient-color-stops));
   }
 
+  .xl\:bg-hero-pattern{
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
   .xl\:from-transparent{
     --gradient-from-color: transparent;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -100511,7 +100549,7 @@ pre code {
   }
 
   .xl\:font-sans{
-    font-family: Nunito Sans;
+    font-family: Open Sans, sans-serif;
   }
 
   .xl\:font-serif{
@@ -100520,6 +100558,10 @@ pre code {
 
   .xl\:font-mono{
     font-family: monospace;
+  }
+
+  .xl\:font-heading{
+    font-family: Poppins, sans-serif;
   }
 
   .xl\:font-hairline{

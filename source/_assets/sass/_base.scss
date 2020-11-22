@@ -13,10 +13,10 @@ body {
 a {
     @apply .font-semibold;
     @apply .no-underline;
-    @apply .text-blue-600;
+    @apply .text-blue-400;
 
     &:hover {
-        @apply .text-blue-800;
+        @apply .text-blue-300;
     }
 }
 
@@ -58,9 +58,11 @@ h4,
 h5,
 h6 {
     @apply .leading-tight;
+    @apply .tracking-wide;
     @apply .mb-4;
     @apply .mt-8;
     @apply .text-gray-900;
+    @apply .font-heading;
 
     &:first-child {
         @apply .mt-0;
