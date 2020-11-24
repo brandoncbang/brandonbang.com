@@ -94,10 +94,15 @@
 /***/ (function(module, exports) {
 
 (function () {
-  var openMenuButton = document.querySelector('.menu-button--open');
-  var closeMenuButton = document.querySelector('.menu-button--close');
-  var navMenu = document.querySelector('.nav-menu');
-  openMenuButton.addEventListener('click', function (event) {});
+  var openMenuButton = document.querySelector('.mobile-nav--button--open');
+  var closeMenuButton = document.querySelector('.mobile-nav--button--close');
+  var navMenu = document.querySelector('.mobile-nav');
+  openMenuButton.addEventListener('click', function (event) {
+    navMenu.classList.add('mobile-nav--show');
+  });
+  closeMenuButton.addEventListener('click', function (event) {
+    navMenu.classList.remove('mobile-nav--show');
+  });
 })();
 
 /***/ }),

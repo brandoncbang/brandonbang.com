@@ -7,6 +7,7 @@
 .page-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: spacing.$size-04 spacing.$size-06;
     background-color: colors.$blueGray-900;
 }
@@ -18,18 +19,47 @@
     > a {
         display: block;
         color: colors.$white;
-        @include fonts.size-2xl;
+        @include fonts.size-3xl;
         font-weight: 500;
         text-decoration: none;
         text-shadow: shadows.$hard-sm-light;
+    }
+}
 
-        @include screens.break-sm {
-            @include fonts.size-3xl;
+// Main navigation menu
+.main-nav--list {
+    display: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+
+    @include screens.break-sm {
+        display: flex;
+    }
+}
+
+.main-nav--item {
+    &:not(:last-child) {
+        margin-right: spacing.$size-06;
+    }
+
+    > a {
+        padding: spacing.$size-03 spacing.$size-03;
+        color: colors.$blueGray-300;
+        @include fonts.size-xl;
+        text-decoration: none;
+
+        &:hover {
+            color: colors.$blueGray-100;
         }
     }
 }
 
-.nav-menu {
+// Mobile navigation menu
+.mobile-nav {
     transform: translate(120%, 0);
     position: fixed;
     top: 0;
@@ -38,19 +68,42 @@
     right: 0;
     padding-top: spacing.$size-40;
     background-color: colors.$blueGray-900;
+    transition: transform 0.3s ease-out;
+
+    @include screens.break-sm {
+        display: none;
+    }
 }
 
-.nav-menu--hidden {
+.mobile-nav--show {
     transform: translate(0, 0);
 }
 
-.menu-button--close {
-    position: fixed;
-    top: 0;
-    right: 0;
+.mobile-nav--button {
+    padding: 8px;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 0;
+    cursor: pointer;
+    fill: colors.$blueGray-300;
+
+    &:hover {
+        fill: colors.$blueGray-100;
+    }
+
+    @include screens.break-sm {
+        display: none;
+    }
 }
 
-.nav-menu--list {
+.mobile-nav--button--close {
+    position: fixed;
+    top: spacing.$size-04;
+    right: spacing.$size-06;
+}
+
+.mobile-nav--list {
     padding: 0;
     margin: 0;
     display: flex;
@@ -64,7 +117,7 @@
     }
 }
 
-.nav-menu--item {
+.mobile-nav--item {
     &:not(:last-child) {
         margin-bottom: spacing.$size-10;
     }
@@ -81,7 +134,9 @@
     }
 
     @include screens.break-sm {
-        margin-bottom: 0;
-        margin-right: spacing.$size-06;
+        &:not(:last-child) {
+            margin-bottom: 0;
+            margin-right: spacing.$size-06;
+        }
     }
 }
