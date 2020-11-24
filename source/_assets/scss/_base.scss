@@ -1,0 +1,31 @@
+@use 'modules/fonts';
+@use 'modules/colors';
+
+@import '~normalize.css/normalize';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: fonts.$font-body;
+    background-color: colors.$blueGray-700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: fonts.$font-heading;
+}
+
+a {
+    color: colors.$blue-300;
+
+    &:visited {
+        color: colors.$indigo-400;
+    }
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+}

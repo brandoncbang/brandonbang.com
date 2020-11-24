@@ -1,0 +1,55 @@
+@use '../modules/screens';
+@use '../modules/spacing';
+@use '../modules/fonts';
+@use '../modules/colors';
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+
+    > .card {
+        flex: 1;
+    }
+
+    > .card:not(:last-child) {
+        margin-bottom: spacing.$size-06;
+    }
+
+    @include screens.break-md {
+        flex-direction: row;
+        align-items: stretch;
+        max-width: none;
+
+        > .card:not(:last-child) {
+            margin-bottom: 0;
+            margin-right: spacing.$size-08;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: spacing.$size-12 spacing.$size-08;
+    background-color: colors.$blueGray-600;
+
+    > h2, > h3, > h4, > h5, > h6 {
+        padding: 0;
+        margin: 0;
+        margin-bottom: spacing.$size-08;
+        @include fonts.size-2xl;
+        text-align: center;
+    }
+
+    > p {
+        padding: 0;
+        margin: 0;
+    }
+}

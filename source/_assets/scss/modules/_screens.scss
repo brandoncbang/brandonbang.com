@@ -1,0 +1,44 @@
+// Responsive screen breakpoints
+
+$min-sm:   640px;
+$min-md:   768px;
+$min-lg:  1024px;
+$min-xl:  1280px;
+$min-2xl: 1536px;
+
+
+@mixin break-sm {
+    @media (min-width: #{$min-sm}) {
+        @content;
+    }
+}
+
+@mixin break-md {
+    @media (min-width: #{$min-md}) {
+        @content;
+    }
+}
+
+@mixin break-lg {
+    @media (min-width: #{$min-lg}) {
+        @content;
+    }
+}
+
+@mixin break-xl {
+    @media (min-width: #{$min-xl}) {
+        @content;
+    }
+}
+
+@mixin break-2xl {
+    @media (min-width: #{$min-sm}) {
+        @content;
+    }
+}
+
+@mixin break-custom($min-size) {
+    @media (min-width: $min-size+'px') {
+        @content;
+    }
+}

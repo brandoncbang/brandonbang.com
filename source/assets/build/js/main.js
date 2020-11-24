@@ -86,17 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./source/_assets/css/main.css":
-/*!*************************************!*\
-  !*** ./source/_assets/css/main.css ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "./source/_assets/js/main.js":
 /*!***********************************!*\
   !*** ./source/_assets/js/main.js ***!
@@ -104,19 +93,35 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+(function () {
+  var openMenuButton = document.querySelector('.menu-button--open');
+  var closeMenuButton = document.querySelector('.menu-button--close');
+  var navMenu = document.querySelector('.nav-menu');
+  openMenuButton.addEventListener('click', function (event) {});
+})();
 
+/***/ }),
+
+/***/ "./source/_assets/scss/main.scss":
+/*!***************************************!*\
+  !*** ./source/_assets/scss/main.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
 /***/ 0:
-/*!***********************************************************************!*\
-  !*** multi ./source/_assets/js/main.js ./source/_assets/css/main.css ***!
-  \***********************************************************************/
+/*!*************************************************************************!*\
+  !*** multi ./source/_assets/js/main.js ./source/_assets/scss/main.scss ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\laragon\www\brandonbang\brandonbang.com\source\_assets\js\main.js */"./source/_assets/js/main.js");
-module.exports = __webpack_require__(/*! C:\laragon\www\brandonbang\brandonbang.com\source\_assets\css\main.css */"./source/_assets/css/main.css");
+module.exports = __webpack_require__(/*! C:\laragon\www\brandonbang\brandonbang.com\source\_assets\scss\main.scss */"./source/_assets/scss/main.scss");
 
 
 /***/ })

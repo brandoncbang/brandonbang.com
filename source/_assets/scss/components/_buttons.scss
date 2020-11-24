@@ -1,0 +1,72 @@
+@use '../modules/spacing';
+@use '../modules/screens';
+@use '../modules/fonts';
+@use '../modules/colors';
+@use '../modules/shadows';
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    max-width: max-content;
+    margin: auto;
+
+    > *:not(:last-child) {
+        margin-bottom: spacing.$size-06;
+    }
+
+    @include screens.break-md {
+        flex-direction: row;
+
+        > *:not(:last-child) {
+            margin-bottom: 0;
+            margin-right: spacing.$size-08;
+        }
+    }
+}
+
+.button {
+    display: block;
+    padding: spacing.$size-04 spacing.$size-07;
+    background-color: colors.$blueGray-200;
+    box-shadow: shadows.$hard-lg-dark;
+    text-decoration: none;
+    @include fonts.size-lg;
+    font-weight: 600;
+    text-align: center;
+    color: colors.$lightBlue-900;
+
+    &:hover {
+        background-color: colors.$blueGray-300;
+    }
+
+    &:visited {
+        color: colors.$lightBlue-900;
+    }
+}
+
+.button--primary {
+    background-color: colors.$amber-200;
+
+    &:hover {
+        background-color: colors.$amber-100;
+    }
+}
+
+.button--secondary {
+    background-color: colors.$lightBlue-300;
+
+    &:hover {
+        background-color: colors.$lightBlue-200;
+    }
+}
+
+.button--dark {
+    box-shadow: shadows.$hard-lg-light;
+    background-color: colors.$lightBlue-400;
+
+    &:hover {
+        background-color: colors.$lightBlue-300;
+    }
+}

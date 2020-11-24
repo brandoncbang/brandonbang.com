@@ -1,0 +1,1 @@
+<small>Copyright © {{ date('Y') }} Brandon Bang</small>

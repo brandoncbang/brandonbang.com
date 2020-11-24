@@ -1,0 +1,11 @@
+@use '../modules/colors';
+@use '../modules/spacing';
+@use '../modules/fonts';
+
+.page-footer {
+    display: flex;
+    justify-content: center;
+    padding: spacing.$size-04 spacing.$size-06;
+    background-color: colors.$blueGray-900;
+    color: colors.$white;
+}
