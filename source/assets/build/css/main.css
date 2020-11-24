@@ -345,7 +345,9 @@ template {
 body {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
-  background-color: #334155;
+  background-color: #1f3449;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.05' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -362,6 +364,11 @@ a:visited {
 img, svg, video, canvas, audio, iframe, embed, object {
   display: block;
   vertical-align: middle;
+}
+
+.page-container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .buttons-container {
@@ -480,7 +487,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   background-color: #0F172A;
 }
 
@@ -490,6 +497,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
 }
 .nav-logo > a {
   display: block;
+  padding: 0.75rem 0.75rem;
   color: #fff;
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -609,14 +617,33 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 .page-footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 1rem 1.5rem;
   background-color: #0F172A;
   color: #fff;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.page-footer > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.page-footer > small {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+@media (min-width: 640px) {
+  .page-footer {
+    padding: 2rem 2.5rem;
+  }
+  .page-footer > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 }
 
 .hero-section {
-  padding: 12rem 1.5rem;
+  padding: 5rem 1rem;
   border-bottom: 10px solid #075985;
   background-color: #3B82F6;
   background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -627,36 +654,61 @@ img, svg, video, canvas, audio, iframe, embed, object {
   margin-bottom: 4rem;
   text-align: center;
   color: #fff;
-  font-size: 3.75rem;
-  line-height: 1rem;
-  line-height: 5rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  line-height: 3.25rem;
   font-weight: 600;
   text-shadow: 4px 4px #0C4A6E;
 }
 .hero-section > p {
-  margin-bottom: 6rem;
+  padding: 0 2.5rem;
+  margin-bottom: 3rem;
   color: #F1F5F9;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  line-height: 3rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  line-height: 2.75rem;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+@media (min-width: 640px) {
+  .hero-section {
+    padding: 12rem 1.5rem;
+  }
+  .hero-section > h2 {
+    font-size: 3.75rem;
+    line-height: 1rem;
+    line-height: 5rem;
+  }
+  .hero-section > p {
+    margin-bottom: 6rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    line-height: 3rem;
+    overflow-wrap: initial;
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none;
+  }
 }
 
 .service-summary-section {
-  padding: 3rem 1.5rem;
+  padding: 2rem 1rem;
   background-color: #1E293B;
 }
 .service-summary-section > h2 {
   padding: 0;
   margin: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
   color: #93C5FD;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  line-height: 5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  line-height: 2.75rem;
 }
 .service-summary-section > .cards-container {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .service-summary-section .service-card {
   background-color: #334155;
@@ -679,4 +731,18 @@ img, svg, video, canvas, audio, iframe, embed, object {
 }
 .service-summary-section .buttons-container {
   margin-bottom: 1.5rem;
+}
+@media (min-width: 640px) {
+  .service-summary-section {
+    padding: 3rem 2rem;
+  }
+  .service-summary-section > h2 {
+    margin-bottom: 3rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    line-height: 5rem;
+  }
+  .service-summary-section > .cards-container {
+    margin-bottom: 4rem;
+  }
 }

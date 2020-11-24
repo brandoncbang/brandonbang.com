@@ -1,6 +1,11 @@
 @use 'colors';
 
 // Named theme colors
-$primary:   colors.$blue-500;
-$secondary: colors.$amber-200;
-$neutral:   colors.$blueGray-700;
+$color-primary:   colors.$blue-500;
+$color-secondary: colors.$amber-200;
+$color-neutral:   colors.$blueGray-700;
+$color-background: hsl(210, 40.5%, 20.5%);
+$color-background-dark: hsl(209, 45%, 15%);
+
+// Maximum page container width
+$page-width: 1400px;

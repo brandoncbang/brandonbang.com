@@ -27,15 +27,17 @@
 </head>
 
 <body>
-    <header class="page-header">
-        @include('_partials.header')
-    </header>
-    <main class="page-content">
-        @yield('body')
-    </main>
-    <footer class="page-footer">
-        @include('_partials.footer')
-    </footer>
+    <div class="page-container">
+        <header class="page-header">
+            @include('_partials.header')
+        </header>
+        <main class="page-content">
+            @yield('body')
+        </main>
+        <footer class="page-footer">
+            @include('_partials.footer')
+        </footer>
+    </div>
 
     <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
 

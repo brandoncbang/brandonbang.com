@@ -1,10 +1,11 @@
+@use '../modules/screens';
 @use '../modules/colors';
 @use '../modules/spacing';
 @use '../modules/fonts';
 @use '../modules/shadows';
 
 .hero-section {
-    padding: spacing.$size-48 spacing.$size-06;
+    padding: spacing.$size-20 spacing.$size-04;
     border-bottom: 10px solid colors.$lightBlue-800;
     background-color: colors.$blue-500;
     background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -15,35 +16,56 @@
         margin-bottom: spacing.$size-16;
         text-align: center;
         color: colors.$white;
-        @include fonts.size-6xl;
-        line-height: 5rem;
+        @include fonts.size-4xl;
+        line-height: 3.25rem;
         font-weight: 600;
         text-shadow: shadows.$hard-md-dark;
     }
+
     > p {
-        margin-bottom: spacing.$size-24;
+        padding: 0 spacing.$size-10;
+        margin-bottom: spacing.$size-12;
         color: colors.$blueGray-100;
-        @include fonts.size-3xl;
-        line-height: 3rem;
+        @include fonts.size-xl;
+        line-height: 2.75rem;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    @include screens.break-sm {
+        padding: spacing.$size-48 spacing.$size-06;
+
+        > h2 {
+            @include fonts.size-6xl;
+            line-height: 5rem;
+        }
+
+        > p {
+            margin-bottom: spacing.$size-24;
+            @include fonts.size-3xl;
+            line-height: 3rem;
+            overflow-wrap: initial;
+            hyphens: none;
+        }
     }
 }
 
 .service-summary-section {
-    padding: spacing.$size-12 spacing.$size-06;
+    padding: spacing.$size-08 spacing.$size-04;
     background-color: colors.$blueGray-800;
 
     > h2 {
         padding: 0;
         margin: 0;
-        margin-bottom: spacing.$size-12;
+        margin-bottom: spacing.$size-08;
         text-align: center;
         color: colors.$blue-300;
-        @include fonts.size-4xl;
-        line-height: 5rem;
+        @include fonts.size-2xl;
+        line-height: 2.75rem;
     }
 
     > .cards-container {
-        margin-bottom: spacing.$size-16;
+        margin-bottom: spacing.$size-08;
     }
 
     .service-card {
@@ -70,5 +92,19 @@
 
     .buttons-container {
         margin-bottom: spacing.$size-06;
+    }
+
+    @include screens.break-sm {
+        padding: spacing.$size-12 spacing.$size-08;
+
+        > h2 {
+            margin-bottom: spacing.$size-12;
+            @include fonts.size-4xl;
+            line-height: 5rem;
+        }
+
+        > .cards-container {
+            margin-bottom: spacing.$size-16;
+        }
     }
 }

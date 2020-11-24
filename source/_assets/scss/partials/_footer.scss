@@ -1,11 +1,31 @@
+@use '../modules/screens';
 @use '../modules/colors';
 @use '../modules/spacing';
 @use '../modules/fonts';
 
 .page-footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: spacing.$size-04 spacing.$size-06;
     background-color: colors.$blueGray-900;
     color: colors.$white;
+    @include fonts.size-base;
+
+    > *:not(:last-child) {
+        margin-bottom: spacing.$size-02;
+    }
+
+    > small {
+        @include fonts.size-sm;
+    }
+
+    @include screens.break-sm {
+        padding: spacing.$size-08 spacing.$size-10;
+
+        > *:not(:last-child) {
+            margin-bottom: spacing.$size-04;
+        }
+    }
 }
