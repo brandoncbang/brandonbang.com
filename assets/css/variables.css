@@ -1,0 +1,28 @@
+:root {
+    --color-page-background: #DAF2F7;
+    --color-primary: #8ADFE0;
+    --color-splash: #89D961;
+    --color-dark: #222;
+    --color-section-background: #ddd;
+    --color-link: #5DC629;
+    --color-invalid: #D96161;
+    --color-heading: #333;
+    --color-paragraph: #555;
+    --color-text-light: #aaa;
+    --color-text-menu: #222;
+
+    --font-brand: 'Permanent Marker', cursive;
+    --font-main: 'Lato', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    --text-size-main: 18px;
+
+    --size-max-page: 1260px;
+    --size-gap-m: 15px;
+
+    --corner-sharp: 2px;
+    --corner-medium: 5px;
+    --corner-round: 10px;
+    --corner-circle: 50%;
+
+    --shadow-small: 0 2px 4px 0 rgba(0,0,0,0.25);
+}
