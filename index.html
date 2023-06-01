@@ -117,8 +117,19 @@
         <section id="contact">
             <h2>Let's Get in Touch!</h2>
 
-            <form class="contact-form" name="contact" method="POST" action="/success" data-netlify="true">
+            <form
+                class="contact-form"
+                name="contact"
+                method="POST"
+                netlify-honeypot="url"
+                data-netlify="true"
+            >
                 <ul>
+                    <li class="hidden">
+                        <label for="url">URL</label>
+                        <input type="text" name="url" id="url" tabindex="-1" autocomplete="off">
+                        <p>If you are a human, leave the URL field empty.</p>
+                    </li>
                     <li>
                         <label for="name">Name</label>
                         <input type="text" name="contact_name" id="name" required>
