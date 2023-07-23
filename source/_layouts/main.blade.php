@@ -9,7 +9,24 @@
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
         <script defer src="{{ mix('js/main.js', 'assets/build') }}"></script>
     </head>
-    <body class="text-gray-900 font-sans antialiased">
-        @yield('body')
+    <body class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <header>
+            <nav>
+                <ul class="flex justify-center space-x-8 text-xl font-medium">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/articles">Articles</a>
+                    </li>
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="pt-32">
+            @yield('body')
+        </main>
     </body>
 </html>
