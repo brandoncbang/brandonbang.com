@@ -2,7 +2,13 @@
 module.exports = {
   content: ['./src/**/*.{html,liquid,js}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        lime: {
+          25: '#fbfef3',
+        },
+      },
+    },
   },
   plugins: [],
 }

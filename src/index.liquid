@@ -2,4 +2,95 @@
 layout: layouts/main
 ---
 
-<h1 class="text-5xl font-bold tracking-tight text-red-500">Hello, World!</h1>
+<section class="bg-lime-25 -mt-px border-b border-lime-300 px-6 lg:px-10">
+    <div class="mx-auto flex max-w-6xl items-center justify-center space-x-16 py-24">
+        <div class="flex-shrink">
+            {% include 'portrait' %}
+        </div>
+
+        <div class="flex-1 space-y-10">
+            <h1 class="text-4xl font-medium tracking-tight text-black/90 sm:text-5xl">I do cool stuff with code.</h1>
+            <p class="max-w-2xl text-lg leading-relaxed text-black/80">I wield Laravel, Vue.js, and Tailwind CSS to
+                build amazing full stack web applications. I love trying new approaches and technologies. I'm currently
+                working at <a
+                    class="font-medium underline decoration-lime-500 decoration-2"
+                    href="https://www.flywheeldigital.com/"
+                >Flywheel</a> to build a cloud-based digital commerce platform.</p>
+
+            <div class="flex space-x-6">
+                <a href="#">
+                    <svg
+                        class="h-8 w-8 text-lime-700" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"
+                        ></path>
+                    </svg>
+                    <span class="sr-only">GitHub</span>
+                </a>
+                <a href="#">
+                    <svg
+                        class="h-8 w-8 text-lime-700" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            d="M12 10.2018L9.30278 12L12 13.7982L14.6972 12L12 10.2018ZM16.5 10.7982L19.1972 9L13 4.86852V8.46482L16.5 10.7982ZM20 10.8685L18.3028 12L20 13.1315V10.8685ZM16.5 13.2018L13 15.5352V19.1315L19.1972 15L16.5 13.2018ZM11 8.46482V4.86852L4.80278 9L7.5 10.7982L11 8.46482ZM4.80278 15L11 19.1315V15.5352L7.5 13.2018L4.80278 15ZM5.69722 12L4 10.8685V13.1315L5.69722 12ZM2 9C2 8.66565 2.1671 8.35342 2.4453 8.16795L11.4453 2.16795C11.7812 1.94402 12.2188 1.94402 12.5547 2.16795L21.5547 8.16795C21.8329 8.35342 22 8.66565 22 9V15C22 15.3344 21.8329 15.6466 21.5547 15.8321L12.5547 21.8321C12.2188 22.056 11.7812 22.056 11.4453 21.8321L2.4453 15.8321C2.1671 15.6466 2 15.3344 2 15V9Z"
+                        ></path>
+                    </svg>
+                    <span class="sr-only">CodePen</span>
+                </a>
+                <a href="#">
+                    <svg
+                        class="h-8 w-8 text-lime-700" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            d="M18.3362 18.339H15.6707V14.1622C15.6707 13.1662 15.6505 11.8845 14.2817 11.8845C12.892 11.8845 12.6797 12.9683 12.6797 14.0887V18.339H10.0142V9.75H12.5747V10.9207H12.6092C12.967 10.2457 13.837 9.53325 15.1367 9.53325C17.8375 9.53325 18.337 11.3108 18.337 13.6245V18.339H18.3362ZM7.00373 8.57475C6.14573 8.57475 5.45648 7.88025 5.45648 7.026C5.45648 6.1725 6.14648 5.47875 7.00373 5.47875C7.85873 5.47875 8.55173 6.1725 8.55173 7.026C8.55173 7.88025 7.85798 8.57475 7.00373 8.57475ZM8.34023 18.339H5.66723V9.75H8.34023V18.339ZM19.6697 3H4.32923C3.59498 3 3.00098 3.5805 3.00098 4.29675V19.7033C3.00098 20.4202 3.59498 21 4.32923 21H19.6675C20.401 21 21.001 20.4202 21.001 19.7033V4.29675C21.001 3.5805 20.401 3 19.6675 3H19.6697Z"
+                        ></path>
+                    </svg>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+            </div>
+
+            <div class="flex items-center space-x-1.5 text-lime-700">
+                <svg class="h-4 w-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 20.8995L16.9497 15.9497C19.6834 13.2161 19.6834 8.78392 16.9497 6.05025C14.2161 3.31658 9.78392 3.31658 7.05025 6.05025C4.31658 8.78392 4.31658 13.2161 7.05025 15.9497L12 20.8995ZM12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364L12 23.7279ZM12 13C13.1046 13 14 12.1046 14 11C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11C10 12.1046 10.8954 13 12 13ZM12 15C9.79086 15 8 13.2091 8 11C8 8.79086 9.79086 7 12 7C14.2091 7 16 8.79086 16 11C16 13.2091 14.2091 15 12 15Z"
+                    ></path>
+                </svg>
+                <span class="text-sm font-semibold">Naples, FL, USA</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="px-6 lg:px-10">
+    <div class="mx-auto max-w-6xl pb-32 pt-24">
+        <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Recent Posts</h2>
+
+        <ul class="mt-12 space-y-8">
+            <li>
+                <h3 class="text-xl">
+                    <a class="font-medium text-slate-900 underline decoration-lime-500 decoration-2" href="#">5 Reasons
+                        Why You Should Try Modern PHP</a>
+                </h3>
+            </li>
+            <li>
+                <h3 class="text-xl">
+                    <a class="font-medium text-slate-900 underline decoration-lime-500 decoration-2" href="#">My
+                        Thoughts On Rust</a>
+                </h3>
+            </li>
+            <li>
+                <h3 class="text-xl">
+                    <a class="font-medium text-slate-900 underline decoration-lime-500 decoration-2" href="#">I Rewrote
+                        My Website!</a>
+                </h3>
+            </li>
+        </ul>
+
+        <a class="mt-12 inline-block border border-lime-500 bg-lime-50 px-9 py-3 font-medium text-lime-900" href="#">More
+            posts &rarr;</a>
+    </div>
+</section>
