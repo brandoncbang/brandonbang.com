@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "serve": "rm -rf _site && npx @11ty/eleventy --serve --quiet & npx tailwindcss -i ./src/css/main.css -o ./_site/css/styles.css --watch",
+    "build": "rm -rf _site && ELEVENTY_ENV=production npx @11ty/eleventy && npx tailwindcss -i ./src/css/main.css -o ./_site/css/styles.css --minify"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "tailwindcss": "^3.3.5"
+  }
+}
