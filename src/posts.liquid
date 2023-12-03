@@ -1,26 +1,26 @@
 ---
 layout: layouts/main
 ---
-<section class='px-6 lg:px-10'>
-  <div class='mx-auto max-w-6xl pb-32 pt-24'>
-    <h1 class='text-4xl font-semibold tracking-tight text-slate-900'>All Posts</h1>
+<section class="px-6 lg:px-10">
+  <div class="mx-auto max-w-6xl pb-32 pt-24">
+    <h1 class="text-4xl font-semibold tracking-tight text-slate-900">All Posts</h1>
 
-    <div class='mt-12 space-y-12'>
+    <div class="mt-12 space-y-8">
       {% assign posts = collections.posts | reverse %}
       {% for post in posts %}
-        <article class='relative flex max-w-xl flex-col items-start space-y-4'>
-          <h3 class='text-2xl font-semibold'>
-            <a href='{{ post.url }}'>
-              <span class='absolute inset-0'></span>
+        <article class="relative flex max-w-xl flex-col items-start">
+          <h3 class="mt-4 text-2xl font-semibold">
+            <a href="{{ post.url }}">
+              <span class="absolute inset-0"></span>
               {{ post.data.title }}
             </a>
           </h3>
-          <p class='text-lg text-slate-700'>
+          <p class="mt-4 text-lg text-slate-700">
             {{ post.data.excerpt }}
           </p>
           <a
-            class='font-medium underline decoration-lime-500 decoration-2'
-            href='{{ post.url }}'
+            class="mt-2.5 block text-lg font-semibold text-slate-900 underline decoration-lime-500 decoration-2"
+            href="{{ post.url }}"
           >
             Read post &rarr;
           </a>
