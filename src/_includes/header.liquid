@@ -6,13 +6,11 @@
       {% include 'mobile-nav' %}
 
       <nav class="hidden sm:flex sm:space-x-10">
-        <a class="text-lg font-medium text-black/75 underline decoration-lime-500 decoration-2" href="/about">
-          About
-        </a>
-        <a class="text-lg font-medium text-black/75 underline decoration-lime-500 decoration-2" href="/posts">
-          Posts
-        </a>
-        <a class="text-lg font-medium text-black/75 underline decoration-lime-500 decoration-2" href="/uses"> Uses </a>
+        {% for item in navItems %}
+          <a class="text-lg font-medium text-black/75 underline decoration-lime-500 decoration-2" href="{{ item.url }}">
+            {{ item.name }}
+          </a>
+        {% endfor %}
       </nav>
     </div>
   </div>

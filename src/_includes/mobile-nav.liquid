@@ -48,13 +48,15 @@
         <a class="text-xl font-medium text-slate-700 underline decoration-lime-500 decoration-2" href="/about">
           Home
         </a>
-        <a class="text-xl font-medium text-slate-700 underline decoration-lime-500 decoration-2" href="/about">
-          About
-        </a>
-        <a class="text-xl font-medium text-slate-700 underline decoration-lime-500 decoration-2" href="/posts">
-          Posts
-        </a>
-        <a class="text-xl font-medium text-slate-700 underline decoration-lime-500 decoration-2" href="/uses"> Uses </a>
+
+        {% for item in navItems %}
+          <a
+            class="text-xl font-medium text-slate-700 underline decoration-lime-500 decoration-2"
+            href="{{ item.url }}"
+          >
+            {{ item.name }}
+          </a>
+        {% endfor %}
       </div>
     </div>
   </nav>
