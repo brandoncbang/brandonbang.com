@@ -1,0 +1,61 @@
+<div
+  x-data="{ showMenu: false }"
+  x-init="
+    $watch('showMenu', showMenu => showMenu
+    ? document.body.classList.add(
+      'overflow-hidden', '-translate-x-full', 'transition-transform', 'motion-reduce:transition-none',
+      'sm:overflow-auto', 'sm:translate-x-0',
+    )
+    : document.body.classList.remove('overflow-hidden', '-translate-x-full', 'sm:overflow-auto', 'sm:translate-x-0'))
+  "
+  class="sm:hidden"
+>
+  <div>
+    <button type="button" @click="showMenu = true">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-8 w-8 text-black/75"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+      <span class="sr-only">Menu</span>
+    </button>
+  </div>
+
+  <nav
+    class="absolute bottom-0 left-0 top-0 w-screen translate-x-full bg-white ring-1 ring-lime-300 transition-transform"
+  >
+    <div class="p-6 lg:px-10">
+      <button class="ml-auto block" type="button" @click="showMenu = false">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="h-8 w-8 text-slate-700"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+        <span class="sr-only">Close</span>
+      </button>
+
+      <div class="mt-12 flex flex-col items-end space-y-8">
+        <a class="text-xl font-medium text-slate-700 underline decoration-lime-500 decoration-2" href="/about">
+          Home
+        </a>
+        <a class="text-xl font-medium text-slate-700 underline decoration-lime-500 decoration-2" href="/about">
+          About
+        </a>
+        <a class="text-xl font-medium text-slate-700 underline decoration-lime-500 decoration-2" href="/posts">
+          Posts
+        </a>
+        <a class="text-xl font-medium text-slate-700 underline decoration-lime-500 decoration-2" href="/uses"> Uses </a>
+      </div>
+    </div>
+  </nav>
+</div>
