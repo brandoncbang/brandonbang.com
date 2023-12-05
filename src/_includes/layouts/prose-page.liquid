@@ -1,0 +1,22 @@
+---
+layout: layouts/main
+---
+<section class="px-6 lg:px-10">
+  <div class="mx-auto max-w-2xl py-16 lg:py-24">
+    {% if mainImage %}
+      <img
+        class="mb-12 h-auto w-60 rounded-2xl ring-1 ring-slate-200 sm:float-right sm:clear-left sm:mb-8 sm:ml-8"
+        src="{{ mainImage.src }}"
+        alt="{{ mainImage.alt }}"
+      >
+    {% endif %}
+
+    <h1 class="text-4xl font-semibold tracking-tight text-slate-900">{{ title }}</h1>
+
+    <div
+      class="prose prose-lg prose-slate mt-8 max-w-none prose-h2:font-semibold prose-a:decoration-lime-500 prose-a:decoration-2"
+    >
+      {{ content }}
+    </div>
+  </div>
+</section>
