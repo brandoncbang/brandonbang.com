@@ -49,7 +49,7 @@ title: Home
   <div class="mx-auto max-w-6xl py-16 lg:py-24">
     <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Recent Posts</h2>
 
-    <ul class="mt-10 space-y-8">
+    <ul class="mt-12 space-y-8">
       {% assign posts = collections.posts | reverse | head: 3 %}
       {% for post in posts %}
         <li>
