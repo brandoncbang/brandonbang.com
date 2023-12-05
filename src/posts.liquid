@@ -18,9 +18,11 @@ title: All Posts
             </a>
           </h2>
 
-          <p class="mt-4 text-lg text-slate-700">
-            {{ post.data.excerpt }}
-          </p>
+          {% if post.data.excerpt %}
+            <p class="mt-4 text-lg text-slate-700">
+              {{ post.data.excerpt }}
+            </p>
+          {% endif %}
 
           <a
             class="mt-4 block font-semibold text-slate-800 underline decoration-lime-500 decoration-2"
