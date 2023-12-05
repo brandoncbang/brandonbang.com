@@ -17,7 +17,7 @@ Some of my favorite projects I've worked on:
 - A physics/chemistry simulation game that runs in the browser
 - A local-first calorie tracking app
 
-You can see many of my other projects on my [GitHub profile](https://github.com/brandoncbang). I'm a avid fan of Free 
+You can see many of my other projects on my [GitHub profile](https://github.com/brandoncbang). I'm an avid fan of Free 
 and Open Source Software (FOSS), and I try to build publicly as much as possible.
 
 When I'm not working with code, I'm usually practicing photography or drawing, going for long walks outdoors, and 
