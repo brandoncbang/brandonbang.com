@@ -4,9 +4,10 @@ title: All Posts
 ---
 <section class="px-6 lg:px-10">
   <div class="mx-auto max-w-6xl py-16 lg:py-24">
-    <h1 class="text-4xl font-semibold tracking-tight text-slate-900">All Posts</h1>
+    <h1 class="max-w-xl text-4xl font-semibold tracking-tight text-slate-900">Posts</h1>
+    <p class="mt-4 text-lg text-slate-700">I write about software development, and sometimes other stuff.</p>
 
-    <div class="mt-10 space-y-8">
+    <div class="mt-16 space-y-8">
       {% assign posts = collections.posts | reverse %}
       {% for post in posts %}
         <article class="relative flex max-w-xl flex-col items-start">
@@ -17,7 +18,7 @@ title: All Posts
             </a>
           </h2>
 
-          <p class="mt-4 text-slate-700">
+          <p class="mt-4 text-lg text-slate-700">
             {{ post.data.excerpt }}
           </p>
 
