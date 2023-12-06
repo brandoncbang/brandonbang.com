@@ -7,11 +7,11 @@ title: All Posts
     <h1 class="max-w-xl text-4xl font-semibold tracking-tight text-slate-900">Posts</h1>
     <p class="mt-4 text-lg text-slate-700">I write about software development, and sometimes other stuff.</p>
 
-    <div class="mt-16 space-y-8">
+    <div class="mt-16 space-y-12">
       {% assign posts = collections.posts | reverse %}
       {% for post in posts %}
         <article class="relative flex max-w-xl flex-col items-start">
-          <h2 class="mt-4 text-2xl font-semibold tracking-tight text-slate-800">
+          <h2 class="text-2xl font-semibold tracking-tight text-slate-800">
             <a href="{{ post.url }}">
               <span class="absolute inset-0"></span>
               {{ post.data.title }}
