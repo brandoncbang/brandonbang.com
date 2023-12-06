@@ -1,10 +1,12 @@
 ---
 layout: layouts/prose-page
-title: About Me
+title: About
 #mainImage:
 #  src: /img/portrait.jpg
 #  alt: Portrait
 ---
+
+# Hello there, thanks for visiting my site!
 
 I've been building software for over a decade, since my dad got me my first programming book as a teenager. In high 
 school, I would make simple websites and games with my friends. These days, I use my skills to solve real world 
