@@ -1,17 +1,6 @@
-<div
-  x-data="{ showMenu: false }"
-  x-init="
-    $watch('showMenu', showMenu => showMenu
-    ? document.body.classList.add(
-      'overflow-hidden', '-translate-x-full', 'transition-transform', 'motion-reduce:transition-none',
-      'sm:overflow-auto', 'sm:translate-x-0',
-    )
-    : document.body.classList.remove('overflow-hidden', '-translate-x-full', 'sm:overflow-auto', 'sm:translate-x-0'))
-  "
-  class="sm:hidden"
->
+<mobile-nav class="sm:hidden">
   <div class="flex">
-    <button type="button" @click="showMenu = true">
+    <button type="button" data-show>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -27,11 +16,11 @@
     </button>
   </div>
 
-  <nav
+  <div
     class="absolute bottom-0 left-0 top-0 w-screen translate-x-full bg-white transition-transform"
   >
     <div class="p-6 lg:px-10">
-      <button class="ml-auto block" type="button" @click="showMenu = false">
+      <button class="ml-auto block" type="button" data-hide>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -46,7 +35,7 @@
         <span class="sr-only">Close menu</span>
       </button>
 
-      <div class="mt-12 flex flex-col items-end space-y-8">
+      <nav class="mt-12 flex flex-col items-end space-y-8">
         <a class="text-xl font-medium text-slate-700 underline decoration-lime-500 decoration-2" href="/">Home</a>
 
         {% for item in navItems %}
@@ -57,7 +46,7 @@
             {{ item.name }}
           </a>
         {% endfor %}
-      </div>
+      </nav>
     </div>
-  </nav>
-</div>
+  </div>
+</mobile-nav>
