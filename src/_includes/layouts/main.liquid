@@ -32,7 +32,9 @@
     {% include 'header' %}
 
     <main class="grid flex-1">
-      {{ content }}
+      <div class="min-w-0">
+        {{ content }}
+      </div>
     </main>
 
     {% include 'footer' %}
