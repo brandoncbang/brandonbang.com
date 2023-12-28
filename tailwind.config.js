@@ -13,6 +13,11 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
+            h1: {
+              fontSize: defaultTheme.fontSize["4xl"],
+              fontWeight: defaultTheme.fontWeight.semibold,
+              letterSpacing: defaultTheme.letterSpacing.tight,
+            },
             h2: {
               fontWeight: defaultTheme.fontWeight.semibold,
             },
@@ -32,6 +37,11 @@ module.exports = {
         },
         lg: {
           css: {
+            h1: {
+              fontSize: defaultTheme.fontSize["4xl"],
+              fontWeight: defaultTheme.fontWeight.semibold,
+              letterSpacing: defaultTheme.letterSpacing.tight,
+            },
             h2: {
               fontWeight: defaultTheme.fontWeight.semibold,
             },
