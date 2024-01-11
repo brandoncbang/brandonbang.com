@@ -1,6 +1,6 @@
-<mobile-nav class="sm:hidden">
+<div x-data="{ open: false }" class="sm:hidden">
   <div class="flex">
-    <button type="button" data-show>
+    <button type="button" @click="open = true">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -17,10 +17,23 @@
   </div>
 
   <div
-    class="absolute bottom-0 left-0 top-0 w-screen translate-x-full bg-white transition-transform"
+    x-show="open"
+    x-transition:enter="transition-transform ease-out duration-100"
+    x-transition:enter-start="translate-x-full"
+    x-transition:enter-end="translate-x-0"
+    x-transition:leave="transition-transform ease-in duration-100"
+    x-transition:leave-start="translate-x-0"
+    x-transition:leave-end="translate-x-full"
+    x-trap.inert.noscroll="open"
+    class="fixed inset-0 z-50 bg-white shadow-sm"
+    @keydown.esc.prevent.stop="open = false"
   >
     <div class="p-6 lg:px-10">
-      <button class="ml-auto block" type="button" data-hide>
+      <button
+        class="ml-auto block"
+        type="button"
+        @click="open = false"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -49,4 +62,4 @@
       </nav>
     </div>
   </div>
-</mobile-nav>
+</div>
