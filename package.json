@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "dev": "rm -rf _site && npx @11ty/eleventy --serve --quiet & npx tailwindcss -i ./src/css/main.css -o ./_site/css/styles.css --watch",
+    "build": "rm -rf _site && ELEVENTY_ENV=production npx @11ty/eleventy && npx tailwindcss -i ./src/css/main.css -o ./_site/css/styles.css --minify"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@shopify/prettier-plugin-liquid": "^1.4.0",
+    "@tailwindcss/typography": "^0.5.10",
+    "prettier": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.7",
+    "tailwindcss": "^3.3.5"
+  }
+}

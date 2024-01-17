@@ -1,0 +1,18 @@
+---
+layout: layouts/main
+---
+<section class="px-6 lg:px-10">
+  <div class="mx-auto max-w-2xl py-16 lg:py-24">
+    {% if mainImage %}
+      <img
+        class="mb-12 h-auto w-60 ring-1 ring-slate-200 sm:float-right sm:clear-left sm:mb-8 sm:ml-8"
+        src="{{ mainImage.src }}"
+        alt="{{ mainImage.alt }}"
+      >
+    {% endif %}
+
+    <div class="prose prose-lg prose-slate max-w-none">
+      {{ content }}
+    </div>
+  </div>
+</section>
