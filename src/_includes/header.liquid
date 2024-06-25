@@ -31,7 +31,10 @@
 
       <nav class="hidden sm:flex sm:space-x-10">
         {% for item in navItems %}
-          <a class="text-lg font-medium text-black/75 underline decoration-lime-500 decoration-2" href="{{ item.url }}">
+          <a
+            class="text-lg font-medium text-black/75 underline decoration-lime-500 decoration-2"
+            href="{{ item.url }}"
+          >
             {{ item.name }}
           </a>
         {% endfor %}

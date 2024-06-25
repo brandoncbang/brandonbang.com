@@ -1,7 +1,16 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.setLibrary(
+    "md",
+    markdownIt({
+      html: true,
+      linkify: true,
+    }),
+  );
+
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -22,6 +31,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
+    markdownTemplateEngine: false,
     dir: {
       input: "src",
     },
