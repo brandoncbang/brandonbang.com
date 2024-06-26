@@ -56,6 +56,9 @@ module.exports = {
               color: colors.slate["900"],
               backgroundColor: colors.slate["50"],
             },
+            "li::marker": {
+              color: colors.lime["500"],
+            },
           },
         },
       },
