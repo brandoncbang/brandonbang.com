@@ -1,3 +1,5 @@
+import setUpSecrets from "/js/secrets.js";
+
 function sample(items) {
   return items[Math.floor(Math.random() * items.length)];
 }
@@ -49,3 +51,5 @@ function inspire() {
 }
 
 inspire();
+
+setUpSecrets();
