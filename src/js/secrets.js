@@ -18,6 +18,9 @@ const secrets = {
       el.style.rotate = `${rotationDegrees}deg`;
     });
   },
+  draw() {
+    location.href = `${location.origin}/secrets/draw`;
+  },
   edit() {
     location.href = `${location.origin}/secrets/edit`;
   },
