@@ -1,4 +1,4 @@
-import { secrets, randomSecret } from "/js/secrets.js";
+import { secrets, randomSecret } from "./secrets.js";
 
 export default function setUpTerminal() {
   const root = document.querySelector("[data-terminal]");
