@@ -9,7 +9,7 @@ export const secrets = {
   bounce() {
     document
       .querySelector("img[src$='portrait.jpg']")
-      .classList.toggle("animate-bounce");
+      ?.classList.toggle("animate-bounce");
   },
   crooked() {
     document
