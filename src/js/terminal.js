@@ -6,14 +6,22 @@ export default function setUpTerminal() {
   const outputElement = root.querySelector('[data-ref="output"]');
   const inputElement = root.querySelector('[data-ref="input"]');
 
+  const closeTerminal = () => {
+    outputElement.innerText = "";
+    document.body.classList.remove("h-screen");
+    root.classList.add("hidden");
+  };
+
   document.addEventListener("keydown", (e) => {
     if (e.key === "`") {
       document.body.classList.add("h-screen");
       root.classList.remove("hidden");
+
+      print(`Welcome to the super secret terminal!\n`);
+      print(`${prompt}`);
     }
     if (e.key === "Escape") {
-      document.body.classList.remove("h-screen");
-      root.classList.add("hidden");
+      closeTerminal();
     }
   });
   document.addEventListener("keyup", (e) => {
@@ -23,23 +31,60 @@ export default function setUpTerminal() {
   });
 
   inputElement.addEventListener("input", (e) => {
-    inputElement.size = inputElement.value.length;
+    resizeInputElement();
   });
 
+  const resizeInputElement = () => {
+    inputElement.size =
+      inputElement.value.length > 0 ? inputElement.value.length : 8;
+  };
+
   inputElement.addEventListener("keydown", (e) => {
-    if (e.key !== "Enter") {
-      return;
+    if (e.key === "ArrowUp") {
+      e.preventDefault();
+
+      if (previousCommands.length === 0) {
+        return;
+      }
+
+      previousCommandIdx = Math.min(
+        previousCommandIdx + 1,
+        previousCommands.length - 1,
+      );
+
+      inputElement.value = previousCommands[previousCommandIdx];
+      resizeInputElement();
     }
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
 
-    print(`${inputElement.value}\n`);
+      previousCommandIdx = Math.max(previousCommandIdx - 1, -1);
 
-    handleInput(inputElement.value);
+      if (previousCommandIdx === -1) {
+        inputElement.value = "";
+        resizeInputElement();
 
-    inputElement.value = "";
-    inputElement.size = 8;
+        return;
+      }
+
+      inputElement.value = previousCommands[previousCommandIdx];
+      resizeInputElement();
+    }
+    if (e.key === "Enter") {
+      print(`${inputElement.value}\n`);
+
+      handleInput(inputElement.value);
+
+      inputElement.value = "";
+      resizeInputElement();
+    }
   });
 
   const print = (s) => {
+    if (!outputElement.checkVisibility()) {
+      return;
+    }
+
     outputElement.innerText += s;
 
     root.scrollTo(0, root.scrollHeight);
@@ -55,8 +100,14 @@ export default function setUpTerminal() {
   };
 
   const commands = {
+    coffee() {
+      location.href = "https://terminal.shop";
+    },
     echo(...args) {
       print(`${args.join(" ")}\n`);
+    },
+    exit() {
+      closeTerminal();
     },
     help() {
       print(`Available commands:\n`);
@@ -85,7 +136,9 @@ export default function setUpTerminal() {
           return;
         }
 
+        print(`Loading secret "${args[0]}"...\n`);
         secrets[args[0]]();
+
         return;
       }
 
@@ -94,17 +147,21 @@ export default function setUpTerminal() {
     },
   };
 
+  let previousCommands = [];
+  let previousCommandIdx = -1;
+
   const handleInput = (input) => {
     const [command, args] = parse(input);
 
     if (command in commands) {
       commands[command](...args);
+
+      previousCommands = [input, ...previousCommands];
+      previousCommandIdx = -1;
     } else if (command !== "") {
       print(`${command}: command not found\n`);
     }
 
     print(`${prompt}`);
   };
-
-  print(`Welcome to the super secret terminal!\n${prompt}`);
 }
