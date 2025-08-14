@@ -45,6 +45,13 @@ export default function setUpTerminal() {
       inputElement.value.length > 0 ? inputElement.value.length : 8;
   };
 
+  const setInputElementValue = (v) => {
+    resizeInputElement();
+    inputElement.value = v;
+
+    root.scrollTo(0, root.scrollHeight);
+  };
+
   inputElement.addEventListener("keydown", (e) => {
     if (e.key === "ArrowUp") {
       e.preventDefault();
@@ -58,10 +65,7 @@ export default function setUpTerminal() {
         previousCommands.length - 1,
       );
 
-      inputElement.value = previousCommands[previousCommandIdx];
-      resizeInputElement();
-
-      root.scrollTo(0, root.scrollHeight);
+      setInputElementValue(previousCommands[previousCommandIdx]);
     }
     if (e.key === "ArrowDown") {
       e.preventDefault();
@@ -69,26 +73,18 @@ export default function setUpTerminal() {
       previousCommandIdx = Math.max(previousCommandIdx - 1, -1);
 
       if (previousCommandIdx === -1) {
-        inputElement.value = "";
-        resizeInputElement();
-
+        setInputElementValue("");
         return;
       }
 
-      inputElement.value = previousCommands[previousCommandIdx];
-      resizeInputElement();
-
-      root.scrollTo(0, root.scrollHeight);
+      setInputElementValue(previousCommands[previousCommandIdx]);
     }
     if (e.key === "Enter") {
       print(`${inputElement.value}\n`);
 
       handleInput(inputElement.value);
 
-      inputElement.value = "";
-      resizeInputElement();
-
-      root.scrollTo(0, root.scrollHeight);
+      setInputElementValue("");
     }
   });
 
@@ -112,11 +108,13 @@ export default function setUpTerminal() {
   };
 
   const commands = {
+    adventure() {
+      print("You are in a dank dungeon. There is a flask on a table.\n");
+      print("> get flask\n");
+      print("You cannot get ye flask.\n");
+    },
     clear() {
       outputElement.innerText = "";
-    },
-    coffee() {
-      location.href = "https://terminal.shop";
     },
     echo(...args) {
       print(`${args.join(" ")}\n`);
