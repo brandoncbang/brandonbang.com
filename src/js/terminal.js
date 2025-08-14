@@ -46,8 +46,8 @@ export default function setUpTerminal() {
   };
 
   const setInputElementValue = (v) => {
-    resizeInputElement();
     inputElement.value = v;
+    resizeInputElement();
 
     root.scrollTo(0, root.scrollHeight);
   };
