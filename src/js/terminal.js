@@ -55,18 +55,20 @@ export default function setUpTerminal() {
   };
 
   const commands = {
+    echo(...args) {
+      print(`${args.join(" ")}\n`);
+    },
     secret(...args) {
       print(`Loading secret...\n`);
       randomSecret();
     },
-    nop() {},
   };
 
   const handleInput = (input) => {
     const [command, args] = parse(input);
 
     if (command in commands) {
-      commands[command].call(...args);
+      commands[command](...args);
     } else if (command !== "") {
       print(`${command}: command not found\n`);
     }
