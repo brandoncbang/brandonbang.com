@@ -6,26 +6,32 @@ export default function setUpTerminal() {
   const outputElement = root.querySelector('[data-ref="output"]');
   const inputElement = root.querySelector('[data-ref="input"]');
 
+  let open = false;
+
   const closeTerminal = () => {
     outputElement.innerText = "";
     document.body.classList.remove("h-screen");
     root.classList.add("hidden");
+
+    open = false;
   };
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "`") {
+    if (!open && e.key === "`") {
       document.body.classList.add("h-screen");
       root.classList.remove("hidden");
+
+      open = true;
 
       print(`Welcome to the super secret terminal!\n`);
       print(`${prompt}`);
     }
-    if (e.key === "Escape") {
+    if (open && e.key === "Escape") {
       closeTerminal();
     }
   });
   document.addEventListener("keyup", (e) => {
-    if (e.key === "`") {
+    if (open && e.key === "`") {
       inputElement.focus();
     }
   });
