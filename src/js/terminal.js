@@ -1,4 +1,4 @@
-import { randomSecret } from "/js/secrets.js";
+import { secrets, randomSecret } from "/js/secrets.js";
 
 export default function setUpTerminal() {
   const root = document.querySelector("[data-terminal]");
@@ -66,6 +66,29 @@ export default function setUpTerminal() {
       }
     },
     secret(...args) {
+      if (args.includes("-h")) {
+        print(`secret: secret [-h] [name ...]\n`);
+        print(`Load a secret.\n\n`);
+        print(`If NAME is specified, loads a secret by that name.\n`);
+        print("\n");
+        print(`Options:\n`);
+        print(`  -h      Display this help message\n`);
+        print("\n");
+        print(`Arguments:\n`);
+        print(`  NAME    Name of a secret to load\n`);
+        return;
+      }
+
+      if (args.length > 0) {
+        if (!(args[0] in secrets)) {
+          secrets["notFound"]();
+          return;
+        }
+
+        secrets[args[0]]();
+        return;
+      }
+
       print(`Loading secret...\n`);
       randomSecret();
     },
