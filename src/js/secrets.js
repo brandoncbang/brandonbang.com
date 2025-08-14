@@ -48,11 +48,3 @@ export function randomSecret() {
 
   secret();
 }
-
-export function setUpSecrets() {
-  document.querySelectorAll("[data-secrets]").forEach((el) => {
-    el.addEventListener("click", (e) => {
-      randomSecret();
-    });
-  });
-}

@@ -1,4 +1,3 @@
-import { setUpSecrets } from "./secrets.js";
 import setUpTerminal from "./terminal.js";
 
 function sample(items) {
