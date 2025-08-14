@@ -2,7 +2,7 @@ function sample(items) {
   return items[Math.floor(Math.random() * items.length)];
 }
 
-const secrets = {
+export const secrets = {
   archBtw() {
     location.href = `${location.origin}/secrets/arch`;
   },

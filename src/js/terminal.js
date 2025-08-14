@@ -58,6 +58,13 @@ export default function setUpTerminal() {
     echo(...args) {
       print(`${args.join(" ")}\n`);
     },
+    help() {
+      print(`Available commands:\n`);
+
+      for (const command of Object.keys(this)) {
+        print(`${command}\n`);
+      }
+    },
     secret(...args) {
       print(`Loading secret...\n`);
       randomSecret();
