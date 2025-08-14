@@ -11,7 +11,7 @@ export default function setUpTerminal() {
   const closeTerminal = () => {
     outputElement.innerText = "";
     document.body.classList.remove("h-screen");
-    root.classList.add("hidden");
+    root.dataset.open = "false";
 
     open = false;
   };
@@ -19,7 +19,7 @@ export default function setUpTerminal() {
   document.addEventListener("keydown", (e) => {
     if (!open && e.key === "`") {
       document.body.classList.add("h-screen");
-      root.classList.remove("hidden");
+      root.dataset.open = "true";
 
       open = true;
 
