@@ -60,6 +60,8 @@ export default function setUpTerminal() {
 
       inputElement.value = previousCommands[previousCommandIdx];
       resizeInputElement();
+
+      root.scrollTo(0, root.scrollHeight);
     }
     if (e.key === "ArrowDown") {
       e.preventDefault();
@@ -75,6 +77,8 @@ export default function setUpTerminal() {
 
       inputElement.value = previousCommands[previousCommandIdx];
       resizeInputElement();
+
+      root.scrollTo(0, root.scrollHeight);
     }
     if (e.key === "Enter") {
       print(`${inputElement.value}\n`);
@@ -83,6 +87,8 @@ export default function setUpTerminal() {
 
       inputElement.value = "";
       resizeInputElement();
+
+      root.scrollTo(0, root.scrollHeight);
     }
   });
 
