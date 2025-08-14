@@ -19,6 +19,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/img/");
   eleventyConfig.addPassthroughCopy("./src/js/");
 
+  eleventyConfig.addShortcode("timestamp", () => `${Date.now()}`);
+
   eleventyConfig.addFilter("head", (array, n = 1) => {
     if (!Array.isArray(array) || array.length === 0) {
       return [];
