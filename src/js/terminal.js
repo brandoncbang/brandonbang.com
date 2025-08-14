@@ -112,6 +112,9 @@ export default function setUpTerminal() {
   };
 
   const commands = {
+    clear() {
+      outputElement.innerText = "";
+    },
     coffee() {
       location.href = "https://terminal.shop";
     },
