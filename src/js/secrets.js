@@ -41,12 +41,16 @@ const secrets = {
   },
 };
 
-export default function setUpSecrets() {
+export function randomSecret() {
+  const secret = sample(Object.values(secrets));
+
+  secret();
+}
+
+export function setUpSecrets() {
   document.querySelectorAll("[data-secrets]").forEach((el) => {
     el.addEventListener("click", (e) => {
-      const secret = sample(Object.values(secrets));
-
-      secret();
+      randomSecret();
     });
   });
 }

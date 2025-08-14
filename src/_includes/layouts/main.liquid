@@ -32,15 +32,32 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body class="relative flex min-h-screen flex-col">
-    {% include 'header' %}
+    <div class="flex flex-1 shrink-0 flex-col overflow-y-scroll">
+      {% include 'header' %}
 
-    <main class="grid flex-1">
-      <div class="min-w-0">
-        {{ content }}
-      </div>
-    </main>
+      <main class="grid flex-1">
+        <div class="min-w-0">
+          {{ content }}
+        </div>
+      </main>
 
-    {% include 'footer' %}
+      {% include 'footer' %}
+    </div>
+
+    <div
+      data-terminal
+      class="hidden flex-1 shrink-0 overflow-scroll whitespace-nowrap bg-black font-mono text-[0] text-white"
+    >
+      <pre
+        data-ref="output"
+        class="inline text-base"
+      ></pre>
+      <input
+        data-ref="input"
+        class="bg-transparent text-base focus:outline-none"
+        type="text"
+      >
+    </div>
 
     <script type="module" src="/js/main.js"></script>
   </body>

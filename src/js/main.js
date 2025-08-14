@@ -1,4 +1,5 @@
-import setUpSecrets from "/js/secrets.js";
+import { setUpSecrets } from "/js/secrets.js";
+import setUpTerminal from "/js/terminal.js";
 
 function sample(items) {
   return items[Math.floor(Math.random() * items.length)];
@@ -53,3 +54,4 @@ function inspire() {
 inspire();
 
 setUpSecrets();
+setUpTerminal();
