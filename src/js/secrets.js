@@ -12,11 +12,13 @@ const secrets = {
       .classList.toggle("animate-bounce");
   },
   crooked() {
-    document.querySelectorAll("body *").forEach((el) => {
-      const rotationDegrees = Math.floor(Math.random() * 3 * 2) - 3;
+    document
+      .querySelectorAll("body :not([data-terminal], [data-terminal] *)")
+      .forEach((el) => {
+        const rotationDegrees = Math.floor(Math.random() * 3 * 2) - 3;
 
-      el.style.rotate = `${rotationDegrees}deg`;
-    });
+        el.style.rotate = `${rotationDegrees}deg`;
+      });
   },
   draw() {
     location.href = `${location.origin}/secrets/draw`;
