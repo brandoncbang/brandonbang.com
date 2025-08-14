@@ -106,5 +106,5 @@ export default function setUpTerminal() {
     print(`${prompt}`);
   };
 
-  print(`${prompt}`);
+  print(`Welcome to the super secret terminal!\n${prompt}`);
 }
